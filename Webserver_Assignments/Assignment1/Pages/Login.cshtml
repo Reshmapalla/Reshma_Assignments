@@ -1,0 +1,14 @@
+﻿@page
+@model Assignments.Pages.LoginModel
+@{
+}
+<div class="container">
+    <form method="post">
+    <label>USERNAME:</label>
+    <input type="text" asp-for="@Model.username"/>
+    <label>PassWord:</label>
+    <input type="text" asp-for="@Model.password"/>
+    <input type="Submit" value="Login"></input>
+    <h1>@Model.message</h1>
+     </form>
+</div>
