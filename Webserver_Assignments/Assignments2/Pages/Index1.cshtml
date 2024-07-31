@@ -1,0 +1,71 @@
+﻿@page
+@model Assignments2.Pages.Index1Model
+@{
+}
+<div class="container">
+    <form method="post">
+         <table class="table">
+            <tr>
+                <td>Id</td>
+                <td>
+                    <input type="number" asp-for="@Model.Book.Id"/>
+                </td>
+            </tr>
+             <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" asp-for="@Model.Book.Name"/>
+                </td>
+            </tr>
+             <tr>
+                <td>price</td>
+                <td>
+                    <input type="number" asp-for="@Model.Book.price"/>
+                </td>
+            </tr>
+             <tr>
+                <td>language</td>
+                <td>
+                    <select  type="text" asp-for="@Model.Book.language"/>
+                    <option value="Telugu">telugu</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="English">English</option>
+
+                </td>
+            </tr>
+             <tr>
+                <td>Author</td>
+                <td>
+                    <input type="text" asp-for="@Model.Book.Author"/>
+                </td>
+            </tr>
+            <td colspan="2">
+                <input type="submit" value="Add" />
+            </td>
+        </table>
+         
+    </form>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>price</th>
+                <th>language</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.List)
+            {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.price</td>
+                        <td>@item.language</td>
+                             <td>@item.Author</td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+    </div>
