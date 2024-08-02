@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="Container">
+    @if (Model != null)
+    {
+        <pre>
+                Id:@Model.MovieId
+                Title:@Model.Title
+                Actor:@Model.Actor
+                Language:@Model.Language
+                Director:@Model.Director
+
+         </pre>
+    }
+    else
+    {
+        <h3 class="text-warning"> MOvie is empty!!!</h3>
+    }
+    <a asp-action="Index">back</a>
+</div>
+
