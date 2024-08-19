@@ -1,0 +1,6 @@
+@JeansAppAPI_HostAddress = http://localhost:5089
+
+GET {{JeansAppAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
